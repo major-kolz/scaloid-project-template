@@ -26,7 +26,7 @@ proguardOptions in Android ++= Seq("-dontobfuscate", "-dontoptimize", "-keepattr
   , "-dontwarn scala.collection.**" // required from Scala 2.11.4
 )
 
-scalacOptions in Compile += "-feature"
+scalacOptions in Compile ++= Seq( "-feature", "-deprecation" )
 
 run <<= run in Android
 
